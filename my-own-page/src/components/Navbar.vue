@@ -31,6 +31,12 @@
       <div class="columns mt-6 pt-6">
         <div class="column"></div>
       </div>
+       <div class="columns mt-6 pt-6">
+        <div class="column"></div>
+      </div>
+       <div class="columns mt-4 pt-4">
+        <div class="column"></div>
+      </div>
     </div>
   </main>
 </template>
