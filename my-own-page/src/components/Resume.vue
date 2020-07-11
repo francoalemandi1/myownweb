@@ -3,10 +3,10 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-one-quarter">
-          <h2 class="is-size-4">RESUME</h2>
+          <h2 class="is-size-4" id="#resume">RESUME</h2>
         </div>
         <div class="column is-one-third">
-          <a class="anchor-class" href="#">Resume.pdf</a>
+          <a class="anchor-class">Resume.pdf</a>
         </div>
       </div>
       <div class="columns is-centered">
@@ -97,13 +97,22 @@
       <div class="column is-one-third">
         <div class="container is-size-4" style="position: relative; left: -12px; top: -15px;">Tools</div>
           <div class="image-container">
-            <div class="card-image" style="position: relative; left: 3px;">
+            <div class="card-image" style="position: relative; left: -3px;">
               <figure class="image is-64x64">
                 <a href="https://git-scm.com/" target="_blank"><img src="@/assets/images/git.svg" ></a>
               </figure>
             </div>
           </div>
         </div>
+      </div>
+      <div class="columns">
+        <div class="column"></div>
+      </div>
+      <div class="columns">
+        <div class="column"></div>
+      </div>
+      <div class="columns">
+        <div class="column"></div>
       </div>
   </main>
 </template>

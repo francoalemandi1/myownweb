@@ -7,10 +7,10 @@
         </div>
         <div class="navbar-menu mr-6 pr-6">
           <div class="navbar-end">
-            <a class="navbar-item mr-6 pr-2">Home</a>
-            <a class="navbar-item mr-6 pr-2">About me</a>
-            <a class="navbar-item mr-6 pr-2">Experience</a>
-            <a class="navbar-item mr-6 pr-2">Contact</a>
+            <a class="item mr-6 pr-2">Home</a>
+            <a class="item mr-6 pr-2" :href="href" @click.prevent='scroll'>About me</a>
+            <a class="item mr-6 pr-2" :href1="href1" @click.prevent='scroll1'>Experience</a>
+            <a class="item mr-6 pr-2" :href2="href2" @click.prevent='scroll2'>Contact</a>
           </div>
         </div>
       </nav>
@@ -22,7 +22,7 @@
       </div>
       <div class="columns mt-6 mb-6 ml-6 pb-6" style="position: relative; left: -10px;">
         <div class="column is-half">
-          <p class="is-size-2" style="position: relative; left: 6px;">
+          <p class="is-size-2" style="position: relative; left: 6px;" ref="about-me">
             Franco Alemandi — A frontend developer,
             focusing on creating digital products with great user experience.
           </p>
@@ -43,7 +43,22 @@
 
 <script>
 export default {
-  
+  data() {
+    return {
+    }
+  },
+  props: ['href', 'href1', 'href2',],
+  methods: {
+    scroll() {
+      document.querySelector(this.href).scrollIntoView({ behavior: 'smooth' });
+    },
+    scroll1() {
+      document.querySelector(this.href1).scrollIntoView({ behavior: 'smooth' });
+    },
+    scroll2() {
+      document.querySelector(this.href2).scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
 </script>
 
@@ -58,11 +73,10 @@ export default {
     background-color: rgb(247, 242, 234);
   }
 
-  .navbar-item:hover{
+  .item:hover{
     background-color: rgb(247, 242, 234);
     color: rgb(204, 120, 120);
   }
-
   a {
   color: rgb(136, 34, 34);
   text-transform: uppercase;
