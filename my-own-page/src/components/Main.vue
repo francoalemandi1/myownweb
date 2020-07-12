@@ -7,12 +7,12 @@
             <img src="@/assets/images/travel.jpg">
           </figure>
         </div>
-        <div class="column is-4" style="margin-left: 5em; position: relative; top: -4em;">
-          <h1 class="is-size-2" id="#about-me">About me</h1>
+        <div class="column is-4" style="margin-left: 5em; position: relative; top: -6em;">
+          <h1 class="is-size-2" id="#about-me">{{ $t('about') }}</h1>
           <br />
-          <p class="is-size-4">Hi! I am Franco from Argentina. A front-end developer currently working at Qplus, a company dedicated to providing systems solutions to industries. Just as I love programming and I'm always learning new technologies in the industry, I also have other interests such as philosophy, history, and economics that I study in my spare time.<br/>
-          As you will see, I like to travel, I think it has positively changed my life and allowed me to focus on the things I love and like to do, and it also made me meet great people around the world. If you have finished on this website and want to contact me to work together or just want to talk to me about things, just <br />
-          <a href="mailto: alemandifrancocm@gmail.com">send me a message.</a>
+          <p class="is-size-4">{{ $t('maindescription') }}
+         {{ $t('maindescription2') }}<br />
+          <a href="mailto: alemandifrancocm@gmail.com">{{ $t('sendmessage') }}</a>
           </p>
         </div>
       </div>
@@ -67,6 +67,27 @@ a:after {
   width: 0;
 }
 a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+.dark a {
+  color: #c9a1a1;
+}
+
+.dark a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #c9a1a1;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.dark a:hover:after { 
   width: 100%; 
   left: 0; 
 }

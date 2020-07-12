@@ -3,8 +3,8 @@
     <div class="container mr-1 mt-6">
         <div class="columns mt-6">
           <div class="column is-one-third ml-6" style="position: relative; left: 5px;" id="#contact">
-            <h1 class="is-size-2">Let's talk</h1>
-            <p class="is-size-4">Want to work together? I’m currently accepting new projects and can be reached at <a class="anchor-class" href="mailto: alemandifrancocm@gmail.com">alemandifrancocm@gmail.com.</a></p>
+            <h1 class="is-size-2">{{ $t('letstalk') }}</h1>
+            <p class="is-size-4">{{ $t('worktogether') }} <a class="anchor-class" href="mailto: alemandifrancocm@gmail.com">alemandifrancocm@gmail.com.</a></p>
           </div>
         </div>
       <div class="contact-container">
@@ -33,12 +33,6 @@
   </main>
 </template>
 
-<script>
-export default {
-  
-}
-</script>
-
 <style scoped>
 .is-size-2{
   text-transform: uppercase;
@@ -54,5 +48,34 @@ small{
 }
 .contact-container{
   margin: 1px;
+}
+
+.dark .anchor-class {
+  color: #ddbebe;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+.dark .anchor-class:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #ddbebe;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.anchor-class:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+.dark small{
+  color: #E8E8E8;
 }
 </style>

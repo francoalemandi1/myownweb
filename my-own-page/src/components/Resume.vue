@@ -3,24 +3,24 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-one-quarter">
-          <h2 class="is-size-4" id="#resume">RESUME</h2>
+          <h2 class="is-size-4" id="#resume">{{ $t('resume') }}</h2>
         </div>
         <div class="column is-one-third">
-          <a class="anchor-class">Resume.pdf</a>
+          <a class="anchor-class">{{ $t('resume') }}.pdf</a>
         </div>
       </div>
       <div class="columns is-centered">
         <div class="column is-one-quarter">
-          <h2 class="is-size-4">PROFILE</h2>
+          <h2 class="is-size-4">{{ $t('profile') }}</h2>
         </div>
         <div class="column is-one-third is-resume">
-          <h2 class="is-size-4">I’m a front-end developer specializing in crafting engaging digital experiences for web and mobile applications.</h2><br />
-          <p class="is-size-5">
-          I’m passionate about turning great ideas into exciting, functional, accessible digital products. With seven years of experience in the industry, I’ve built various products for individuals and organizations ranging from simple, highly converting marketing landing pages to mid-sized Node.js web applications. <br /><br />
-          As a freelancer since 2013, I’ve worked with a variety of clients and creative agencies. At the moment, I collaborate primarily with Hub & Spoke Creative to create digital experiences that effectively connect with their audiences. While I’m primarily a front-end developer, in the past I’ve worked with companies and organizations such as Proper Channel and Technole in public relations, marketing and technical writing capacities.
-          <br/><br /> When I’m not in a code editor, I typically spend time working on my writing, filming, catching up on some of my most watched shows, and seeing what’s new on my favorite YouTube channel.
+          <h2 class="is-size-4">{{ $t('mainresume') }}</h2><br />
+          <p class="is-size-5">{{ $t('s21resume')}} <br /><br />
+          {{ $t('doctadevsresume') }} <br /><br />
+          {{ $t('aboutmeresume') }} <br /><br />
+          {{$t('futureresume')}}
           <br /><br />
-          <a class="anchor-class">Interested in working together? Let’s connect.</a></p>
+          <a class="anchor-class">{{ $t('interestresume') }}</a></p>
         </div>
       </div>
       <div class="columns">
@@ -31,10 +31,10 @@
       </div>
     <div class="columns is-centered">
       <div class="column is-one-quarter">
-        <h2 class="is-size-4">SKILLSET</h2>
+        <h2 class="is-size-4">{{ $t('skillset') }}</h2>
       </div>
       <div class="column is-one-third">
-        <div class="container is-size-4" style="position: relative; left: -12px; top: -15px;">Design</div>
+        <div class="container is-size-4" style="position: relative; left: -12px; top: -15px;">{{ $t('design') }}</div>
           <div class="image-container">
             <div class="card-image" style="position: relative; left: 3px;">
               <figure class="image is-64x64">
@@ -49,7 +49,7 @@
       <div class="column is-one-quarter"></div>
       <div class="column is-one-third">
         <div class="container is-size-4">
-          Code
+          {{ $t('code') }}
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
     <div class="columns is-centered" style="position: relative; left: 20px;">
       <div class="column is-one-quarter"></div>
       <div class="column is-one-third">
-        <div class="container is-size-4" style="position: relative; left: -12px; top: -15px;">Tools</div>
+        <div class="container is-size-4" style="position: relative; left: -12px; top: -15px;">{{ $t('Tools') }}</div>
           <div class="image-container">
             <div class="card-image" style="position: relative; left: -3px;">
               <figure class="image is-64x64">
@@ -116,12 +116,6 @@
       </div>
   </main>
 </template>
-
-<script>
-export default {
-  
-}
-</script>
 
 <style scoped>
 main {
@@ -153,6 +147,35 @@ figure:hover{
   left: 50%;
   position: absolute;
   background: rgb(204, 120, 120);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.anchor-class:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+.dark main {
+  background: #15202B;
+}
+
+.dark .anchor-class {
+  color: #ddbebe;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+.dark .anchor-class:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #ddbebe;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }

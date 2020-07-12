@@ -6,6 +6,7 @@ import bulma from 'bulma'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css';
 import '@/assets/css/styles.css';
+import i18n from '@/i18n';
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
@@ -18,7 +19,8 @@ Vue.component('nav-bar', require('./components/Navbar.vue').default)
 
 new Vue({
   render: function (h) { return h(App) },
-
+  
+  i18n,
 }).$mount('#app')
 
 
