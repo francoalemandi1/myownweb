@@ -1,13 +1,35 @@
 <template>
   <main>
-    <div class="container mr-1 mt-6">
+    <div class="container is-centered mt-6">
       <div class="columns mt-6">
-        <div class="column is-half ml-6" style="position: relative; left: 5px;">
-          <figure> 
-            <img src="@/assets/images/travel.jpg">
-          </figure>
+        <div class="column is-2"></div>
+        <div class="column is-one-quarter ml-6 is-slider" style="position: relative; left: 5px;">
+          <carousel :per-page="1" :navigate-to="someLocalProperty" :mouse-drag="false"
+            data-index="0"
+            data-name="MySlideName"
+            @slideclick="handleSlideClick"
+            paginationColor='#F3A08F'
+            paginationActiveColor= '#E0330E'
+            >
+            <slide>
+              <figure> 
+                <img src="@/assets/images/yo.jpg">
+              </figure>
+            </slide>
+            <slide>
+              <figure> 
+                <img src="@/assets/images/travel.jpg">
+              </figure>
+            </slide>
+            <slide>
+              <figure> 
+                <img src="@/assets/images/iruya.jpg">
+              </figure>
+            </slide>
+          </carousel>
         </div>
-        <div class="column is-4" style="margin-left: 5em; position: relative; top: -6em;">
+        <div class="column is-2"></div>
+        <div class="column is-one-third" style="position: relative; top: -6em;">
           <h1 class="is-size-2" id="#about-me">{{ $t('about') }}</h1>
           <br />
           <p class="is-size-4">{{ $t('maindescription') }}
@@ -21,22 +43,36 @@
 </template>
 
 <script>
-export default {
+import { Carousel, Slide } from 'vue-carousel';
 
+export default {
+  name: 'main',
+  components: {
+    Carousel,
+    Slide,
+  },
+  methods: {
+    handleSlideClick (dataset) {
+    console.log(dataset.index, dataset.name)
+  },
+  }
 }
 </script>
 
 <style scoped>
-figure{
+.is-slider{
   position: relative;
-  top: -16rem;
+  top: -15rem;
 }
-
 img{
   border-radius: 15px;
-  box-sizing: border-box;
-  height: 50rem;
-  width: 50rem;
+  object-fit: cover;
+  width: 30rem;
+  height: 40rem;
+}
+.slide{
+  position: relative;
+  left: 500px;
 }
 
 p,

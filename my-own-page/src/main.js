@@ -7,6 +7,10 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css';
 import '@/assets/css/styles.css';
 import i18n from '@/i18n';
+import VueCarousel from 'vue-carousel';
+
+
+Vue.use(VueCarousel);
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
@@ -14,8 +18,6 @@ Vue.use(bulma)
 Vue.use(Vuetify)
 
 Vue.config.productionTip = false
-
-Vue.component('nav-bar', require('./components/Navbar.vue').default)
 
 new Vue({
   render: function (h) { return h(App) },
