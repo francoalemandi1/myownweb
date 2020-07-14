@@ -66,7 +66,7 @@
       </div>
       <div class="column is-1">
         <div class="image-container">
-          <div class="card-image" style="position: relative; left: 3px;">
+          <div class="card-image" style="position: relative; left: 20px;">
             <figure class="image is-64x64">
               <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="@/assets/images/css.svg"></a>
             </figure>
@@ -75,7 +75,7 @@
       </div>
       <div class="column is-1">
         <div class="image-container">
-          <div class="card-image">
+          <div class="card-image" style="position: relative; left: 20px;">
             <figure class="image is-64x64">
               <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="@/assets/images/JS.svg"></a>
             </figure>
@@ -84,7 +84,7 @@
       </div>
       <div class="column is-1">
         <div class="image-container">
-          <div class="card-image">
+          <div class="card-image" style="position: relative; left: 20px;">
             <figure class="image is-64x64">
               <a href="https://vuejs.org/" target="_blank"><img src="@/assets/images/Vue.svg"></a>
             </figure>

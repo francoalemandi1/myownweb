@@ -4,7 +4,7 @@
       <div class="columns mt-6">
         <div class="column is-2"></div>
         <div class="column is-one-quarter ml-6 is-slider" style="position: relative; left: 5px;">
-          <carousel :per-page="1" :navigate-to="someLocalProperty" :mouse-drag="false"
+          <carousel :per-page="1" :mouse-drag="false"
             data-index="0"
             data-name="MySlideName"
             @slideclick="handleSlideClick"

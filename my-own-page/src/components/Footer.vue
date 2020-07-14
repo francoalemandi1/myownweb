@@ -2,7 +2,7 @@
   <main>
     <div class="container mr-1 mt-6">
         <div class="columns mt-6">
-          <div class="column is-one-third ml-6" style="position: relative; left: 5px;" id="#contact">
+          <div class="column is-one-third" id="#contact">
             <h1 class="is-size-2">{{ $t('letstalk') }}</h1>
             <p class="is-size-4">{{ $t('worktogether') }} <a class="anchor-class" href="mailto: alemandifrancocm@gmail.com">alemandifrancocm@gmail.com.</a></p>
           </div>
@@ -39,7 +39,7 @@
   font-weight: bolder;
 }
 .is-size-4{
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 small{
   color: black;
@@ -48,6 +48,10 @@ small{
 }
 .contact-container{
   margin: 1px;
+}
+
+.anchor-class {
+  font-size: 21px;
 }
 
 .dark .anchor-class {

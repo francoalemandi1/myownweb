@@ -1,11 +1,16 @@
 <template>
   <main class="main-content">
-    <div class="container mr-1">
+    <div class="container has-text-centered mr-1">
       <nav class="navbar">
         <div class="navbar-brand">
           <div class="brand-size ml-5" style="position: relative; left: 1em;">FDA.</div>
+          <a role="button" class="navbar-burger burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-        <div class="navbar-menu mr-6 pr-6">
+        <div class="navbar-menu mr-6 pr-6" :class="{ 'is-active': showNav }" id="navbarBasicExample">
           <div class="navbar-end">
             <a class="item mr-4 pr-2">{{ $t('home') }}</a>
             <a class="item mr-4 pr-2" :href="href" @click.prevent='scroll'>{{ $t('about') }}</a>
@@ -30,7 +35,7 @@
       </div>
       <div class="columns mt-6 mb-6 ml-6 pb-6" style="position: relative; left: -10px;">
         <div class="column is-half">
-          <p class="is-size-2" style="position: relative; left: 6px;" ref="about-me">
+          <p class="is-size-2 has-text-left" style="position: relative; left: 6px;" ref="about-me">
             {{ $t('shortdescription') }}
           </p>
         </div>
@@ -55,6 +60,7 @@ export default {
   name: 'Navbar',
   data() {
     return {
+      showNav: false,
     }
   },
   props: ['href', 'href1', 'href2', 'mode'],
@@ -103,6 +109,10 @@ export default {
   padding: 15px 20px;
   position: relative;
 }
+.navbar-menu {
+  background-color: rgb(247, 242, 234);
+  border-radius: 16px;
+}
 .item:after {    
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -133,6 +143,12 @@ export default {
 .dark .navbar {
   background: #15202B;
 }
+
+.dark .navbar-menu{
+  background: #15202B;
+  border-radius: 16px;
+}
+
 
 .dark .item {
   color: #E8E8E8;
