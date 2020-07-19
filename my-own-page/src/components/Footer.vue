@@ -2,21 +2,22 @@
   <main>
     <div class="container mr-1 mt-6">
         <div class="columns mt-6">
-          <div class="column is-one-third" id="#contact">
-            <h1 class="is-size-2">{{ $t('letstalk') }}</h1>
-            <p class="is-size-4">{{ $t('worktogether') }} <a class="anchor-class" href="mailto: alemandifrancocm@gmail.com">alemandifrancocm@gmail.com.</a></p>
+          <div class="column is-one-third is-talk" id="#contact">
+            <h1 class="is-size-2 is-lets-talk" v-scrollanimation>{{ $t('letstalk') }}</h1>
+            <p class="is-size-4" v-scrollanimation>{{ $t('worktogether') }} <a class="anchor-class" href="mailto: alemandifrancocm@gmail.com">alemandifrancocm@gmail.com.</a></p>
           </div>
         </div>
       <div class="contact-container">
-        <div class="columns mt-6 mb-4">
+        <div class="columns mt-6 mb-4 is-last-icons">
           <div class="column is-two-thirds ml-6" style="position: relative; left: 5px;">
           <small>&copy; Alemandi Franco</small>
           </div>
-          <div class="column">
-            <figure class="image is-32x32">
-              <a href="https://github.com/francoalemandi1" target="_blank"><img src="@/assets/images/github.svg"></a>
-            </figure>
-          </div>
+          <div class="icons-container">
+            <div class="column">
+              <figure class="image is-32x32">
+                <a href="https://github.com/francoalemandi1" target="_blank"><img src="@/assets/images/github.svg"></a>
+              </figure>
+            </div>
             <div class="column">
               <figure class="image is-32x32">
                 <a href="https://www.linkedin.com/in/franco-alemandi/" target="_blank"><img src="@/assets/images/linkedin.svg"></a>
@@ -28,6 +29,7 @@
               </figure>
             </div>
           </div>
+        </div>
       </div>
     </div>
   </main>
@@ -81,5 +83,50 @@ small{
 
 .dark small{
   color: #E8E8E8;
+}
+
+/* Transitions */
+.before-enter{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-out;
+}
+
+.enter{
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 2s ease-out;
+}
+.icons-container{
+  display: flex;
+    flex-flow: row;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1025px) {
+  .carousel {
+    position: relative;
+    left: -1.7rem;
+  }
+  .icons-container{
+    display: flex;
+    flex-flow: row;
+    align-content: space-around;
+    justify-content: space-around;
+
+    position: relative;
+    left: 2rem;
+  }
+  .is-talk{
+    text-align: justify;
+  }
+  .is-lets-talk{
+    text-align: center;
+  }
+  small{
+    position: relative;
+    left: 3.5rem;
+  }
 }
 </style>

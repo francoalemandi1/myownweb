@@ -35,7 +35,7 @@
       </div>
       <div class="columns mt-6 mb-6 ml-6 pb-6" style="position: relative; left: -10px;">
         <div class="column is-half">
-          <p class="is-size-2 has-text-left" style="position: relative; left: 6px;" ref="about-me">
+          <p class="is-size-2 has-text-left" style="position: relative; left: 6px;" ref="about-me" v-scrollanimation> 
             {{ $t('shortdescription') }}
           </p>
         </div>
@@ -216,4 +216,23 @@ export default {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
+/* Transitions */
+.before-enter{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-out;
+}
+
+.enter{
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 2s ease-out;
+}
+
+@media screen and (max-width: 1367px) {
+  .navbar-menu{
+    position: relative;
+    left: 1.8rem;
+  }
+}
 </style>

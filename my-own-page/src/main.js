@@ -8,7 +8,9 @@ import 'vuetify/dist/vuetify.min.css';
 import '@/assets/css/styles.css';
 import i18n from '@/i18n';
 import VueCarousel from 'vue-carousel';
+import ScrollAnimation from '@/directives/scrollanimation.js';
 
+Vue.directive('scrollanimation', ScrollAnimation);
 
 Vue.use(VueCarousel);
 

@@ -3,8 +3,8 @@
     <div class="container is-centered mt-6">
       <div class="columns mt-6">
         <div class="column is-2"></div>
-        <div class="column is-one-quarter ml-6 is-slider" style="position: relative; left: 5px;">
-          <carousel :per-page="1" :mouse-drag="false"
+        <div v-scrollanimation class="column is-one-quarter ml-6 is-slider" style="position: relative; left: 5px;">
+          <carousel :per-page="1" :mouse-drag="false" class="carousel"
             data-index="0"
             data-name="MySlideName"
             @slideclick="handleSlideClick"
@@ -23,6 +23,11 @@
             </slide>
             <slide>
               <figure> 
+                <img src="@/assets/images/doctadevs.jpg">
+              </figure>
+            </slide>
+            <slide>
+              <figure> 
                 <img src="@/assets/images/iruya.jpg">
               </figure>
             </slide>
@@ -30,9 +35,9 @@
         </div>
         <div class="column is-2"></div>
         <div class="column is-one-third" style="position: relative; top: -6em;">
-          <h1 class="is-size-2" id="#about-me">{{ $t('about') }}</h1>
+          <h1 class="is-size-2 is-about-me" id="#about-me" v-scrollanimation>{{ $t('about') }}</h1>
           <br />
-          <p class="is-size-4">{{ $t('maindescription') }}
+          <p class="is-size-4" v-scrollanimation>{{ $t('maindescription') }}
          {{ $t('maindescription2') }}<br />
           <a href="mailto: alemandifrancocm@gmail.com">{{ $t('sendmessage') }}</a>
           </p>
@@ -126,5 +131,28 @@ a:hover:after {
 .dark a:hover:after { 
   width: 100%; 
   left: 0; 
+}
+
+/* Transitions */
+.before-enter{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-out;
+}
+
+.enter{
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 2s ease-out;
+}
+
+@media screen and (max-width: 1366px) {
+  .carousel {
+    position: relative;
+    left: -1.7rem;
+  }
+  .is-about-me{
+    text-align: center;
+  }
 }
 </style>
