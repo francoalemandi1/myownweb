@@ -6,7 +6,7 @@
           <h2 class="is-size-4 is-resume-title" id="#resume" v-scrollanimation>{{ $t('resume') }}</h2>
         </div>
         <div class="column is-one-third is-resume-pdf">
-          <a class="anchor-class" v-scrollanimation>{{ $t('resume') }}.pdf</a>
+          <a class="anchor-class" v-scrollanimation href="https://drive.google.com/file/d/1u47js1X6VSyNimUd2DQ8cIifgTIsw6Ov/view?usp=sharing" target="_blank">{{ $t('resume') }}.pdf</a>
         </div>
       </div>
       <div class="columns is-centered">
@@ -20,7 +20,7 @@
           {{ $t('aboutmeresume') }} <br /><br />
           {{$t('futureresume')}}
           <br /><br />
-          <a v-scrollanimation class="anchor-class">{{ $t('interestresume') }}</a></p>
+          <a href="mailto: alemandifrancocm@gmail.com" v-scrollanimation class="anchor-class" >{{ $t('interestresume') }}</a></p>
         </div>
       </div>
       <div class="columns">
@@ -34,9 +34,9 @@
         <h2 class="is-size-4 is-skillset" v-scrollanimation>{{ $t('skillset') }}</h2>
       </div>
       <div class="column is-one-third">
-        <div class="container is-size-4 is-design" style="position: relative; left: -12px; top: -15px;" v-scrollanimation>{{ $t('design') }}</div>
-          <div v-scrollanimation class="image-container">
-            <div class="card-image is-ps-image" style="position: relative; left: 3px;">
+        <div class="container is-size-4 is-design" v-scrollanimation>{{ $t('design') }}</div>
+          <div v-scrollanimation class="image-container" style='position: relative; left: 0.5rem;'>
+            <div class="card-image is-ps-image">
               <figure class="image is-64x64">
                 <a href="https://www.adobe.com/la/products/photoshop.html" target="_blank"><img src="@/assets/images/PS.svg"></a>
               </figure>
@@ -51,53 +51,52 @@
         <div v-scrollanimation class="container is-size-4 is-code-title">
           {{ $t('code') }}
         </div>
+        <div v-scrollanimation class="columns is-full is-code">
+          <div class="column is-2">
+            <div class="image-container is-html">
+              <div class="card-image">
+                <figure class="image is-96x96" style="position: relative; top: -10px;">
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="@/assets/images/HTMlvector.svg"></a>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="column is-2">
+            <div class="image-container is-css">
+              <div class="card-image">
+                <figure class="image is-64x64">
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="@/assets/images/css.svg"></a>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="column is-2">
+            <div class="image-container is-js">
+              <div class="card-image">
+                <figure class="image is-64x64">
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="@/assets/images/JS.svg"></a>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="column is-2">
+            <div class="image-container is-vue">
+              <div class="card-image">
+                <figure class="image is-64x64">
+                  <a href="https://vuejs.org/" target="_blank"><img src="@/assets/images/Vue.svg"></a>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div v-scrollanimation class="columns is-centered is-code" style="position: relative; left: -5px;">
-      <div class="column is-3"></div>
-      <div class="column is-1">
-        <div class="image-container is-html">
-          <div class="card-image" style="position: relative; left: 3px;">
-            <figure class="image is-96x96" style="position: relative; top: -10px;">
-              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="@/assets/images/HTMlvector.svg"></a>
-            </figure>
-          </div>
-        </div>
-      </div>
-      <div class="column is-1">
-        <div class="image-container is-css">
-          <div class="card-image" style="position: relative; left: 20px;">
-            <figure class="image is-64x64">
-              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="@/assets/images/css.svg"></a>
-            </figure>
-          </div>
-        </div>
-      </div>
-      <div class="column is-1">
-        <div class="image-container is-js">
-          <div class="card-image" style="position: relative; left: 20px;">
-            <figure class="image is-64x64">
-              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="@/assets/images/JS.svg"></a>
-            </figure>
-          </div>
-        </div>
-      </div>
-      <div class="column is-1">
-        <div class="image-container is-vue">
-          <div class="card-image" style="position: relative; left: 20px;">
-            <figure class="image is-64x64">
-              <a href="https://vuejs.org/" target="_blank"><img src="@/assets/images/Vue.svg"></a>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div v-scrollanimation class="columns is-centered" style="position: relative; left: 20px;">
+    <div v-scrollanimation class="columns is-centered">
       <div class="column is-one-quarter"></div>
       <div class="column is-one-third">
-        <div class="container is-size-4 is-tools" style="position: relative; left: -12px; top: -15px;">{{ $t('Tools') }}</div>
-          <div class="image-container">
-            <div class="card-image is-git-image" style="position: relative; left: -3px;">
+        <div class="container is-size-4 is-tools">{{ $t('Tools') }}</div>
+          <div class="image-container" style='position: relative; left: 0.7rem;'>
+            <div class="card-image is-git-image">
               <figure class="image is-64x64">
                 <a href="https://git-scm.com/" target="_blank"><img src="@/assets/images/git.svg" ></a>
               </figure>
@@ -144,7 +143,6 @@ figure:hover{
   content: "";
   display: block;
   height: 2px;
-  left: 50%;
   position: absolute;
   background: rgb(204, 120, 120);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -173,8 +171,6 @@ figure:hover{
   content: "";
   display: block;
   height: 2px;
-  left: 50%;
-  position: absolute;
   background: #ddbebe;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
@@ -203,26 +199,6 @@ figure:hover{
     flex-flow: row;
     align-content: space-around;
     justify-content: space-around;
-
-    position: absolute;
-    left: -20px;
-  }
-  .is-html{
-    position: relative;
-    left: -1rem;
-
-  }
-  .is-css{
-    position: relative;
-    left: -2.2rem;
-  }
-  .is-js{
-    position: relative;
-    left: -1.8rem;
-  }
-  .is-vue{
-    position: relative;
-    left: -1.7rem;
   }
   .is-resume-title,
   .is-profile,
@@ -234,7 +210,6 @@ figure:hover{
   }
   .is-design{
     text-align: center;
-    padding-left: 35px;
   }
 
   .is-ps-image{
@@ -242,11 +217,13 @@ figure:hover{
     flex-flow: row;
     align-content: center;
     justify-content: center;
+
+    position: relative;
+    left: -0.5rem;
   }
 
   .is-tools{
     text-align: center;
-    padding-right: 15px;
   }
 
   .is-git-image{
@@ -256,7 +233,7 @@ figure:hover{
     justify-content: center;
 
     position: relative;
-    padding-right: 25px;
+    left: -0.7rem;
   }
 }
 </style>

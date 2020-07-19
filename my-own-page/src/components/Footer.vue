@@ -9,7 +9,7 @@
         </div>
       <div class="contact-container">
         <div class="columns mt-6 mb-4 is-last-icons">
-          <div class="column is-two-thirds ml-6" style="position: relative; left: 5px;">
+          <div class="column is-two-thirds ml-6">
           <small>&copy; Alemandi Franco</small>
           </div>
           <div class="icons-container">
@@ -99,24 +99,22 @@ small{
 }
 .icons-container{
   display: flex;
-    flex-flow: row;
-    align-content: space-around;
-    justify-content: space-around;
+  flex-flow: row;
+  align-content: space-around;
+  justify-content: space-around;
+
+  margin-left: 2rem;
 }
 
 @media screen and (max-width: 1025px) {
   .carousel {
     position: relative;
-    left: -1.7rem;
   }
   .icons-container{
     display: flex;
     flex-flow: row;
-    align-content: space-around;
-    justify-content: space-around;
-
-    position: relative;
-    left: 2rem;
+    align-content: space-between;
+    justify-content: space-between;
   }
   .is-talk{
     text-align: justify;
@@ -125,8 +123,7 @@ small{
     text-align: center;
   }
   small{
-    position: relative;
-    left: 3.5rem;
+    margin-left: 3rem;
   }
 }
 </style>
