@@ -34,10 +34,10 @@
           </carousel>
         </div>
         <div class="column is-2"></div>
-        <div class="column is-one-third" style="position: relative; top: -6em;">
-          <h1 class="is-size-2 is-about-me" id="#about-me" v-scrollanimation>{{ $t('about') }}</h1>
+        <div class="column is-one-third is-my-info" style="position: relative; top: -6em;">
+          <h1 class="is-about-me" id="#about-me" v-scrollanimation>{{ $t('about') }}</h1>
           <br />
-          <p class="is-size-4" v-scrollanimation>{{ $t('maindescription') }}
+          <p class="main-descr-p" v-scrollanimation>{{ $t('maindescription') }}
          {{ $t('maindescription2') }}<br />
           <a href="mailto: alemandifrancocm@gmail.com">{{ $t('sendmessage') }}</a>
           </p>
@@ -58,10 +58,10 @@ export default {
   },
   methods: {
     handleSlideClick (dataset) {
-    console.log(dataset.index, dataset.name)
+      console.log(dataset.index, dataset.name);
+    },
   },
-  }
-}
+};
 </script>
 
 <style scoped>
@@ -112,6 +112,12 @@ a:hover:after {
   left: 0; 
 }
 
+.is-about-me{
+  font-size: 30px;
+}
+.main-descr-p{
+  font-size: 22px;
+}
 .dark a {
   color: #c9a1a1;
 }
@@ -146,13 +152,21 @@ a:hover:after {
   transition: all 2s ease-out;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 992px) {
+  main{
+    overflow-x: hidden;
+  }
   .carousel {
     position: relative;
     left: -1.7rem;
   }
   .is-about-me{
     text-align: center;
+    font-size: 20px;
+  }
+  .main-descr-p{
+    font-size: 18px;
+    margin: 12px;
   }
 }
 </style>

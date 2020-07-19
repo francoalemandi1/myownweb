@@ -3,8 +3,8 @@
     <div class="container mr-1 mt-6">
         <div class="columns mt-6">
           <div class="column is-one-third is-talk" id="#contact">
-            <h1 class="is-size-2 is-lets-talk" v-scrollanimation>{{ $t('letstalk') }}</h1>
-            <p class="is-size-4" v-scrollanimation>{{ $t('worktogether') }} <a class="anchor-class" href="mailto: alemandifrancocm@gmail.com">alemandifrancocm@gmail.com.</a></p>
+            <h1 class="is-lets-talk" v-scrollanimation>{{ $t('letstalk') }}</h1>
+            <p class="is-work-together" v-scrollanimation>{{ $t('worktogether') }} <a class="anchor-class" href="mailto: alemandifrancocm@gmail.com">alemandifrancocm@gmail.com.</a></p>
           </div>
         </div>
       <div class="contact-container">
@@ -105,8 +105,14 @@ small{
 
   margin-left: 2rem;
 }
+.is-lets-talk{
+  font-size: 30px;
+}
+.is-work-together{
+  font-size: 24px;
+}
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 992px) {
   .carousel {
     position: relative;
   }
@@ -121,9 +127,19 @@ small{
   }
   .is-lets-talk{
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
   }
+  .is-work-together{
+  font-size: 16px;
+  margin: 12px;
+}
   small{
     margin-left: 3rem;
+  }
+  .anchor-class{
+    letter-spacing: 0;
+    font-size: 18px;
   }
 }
 </style>

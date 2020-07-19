@@ -27,7 +27,7 @@
           </div>
         </div>
       </nav>
-      <div class="columns mt-6 pt-6 ml-6">
+      <div class="columns mt-6 pt-6 ml-6" @click="showNav = !showNav">
         <div class="column"></div>
       </div>
       <div class="columns mt-4 pt-6 ml-6">
@@ -35,7 +35,7 @@
       </div>
       <div class="columns mt-6 mb-6 ml-6 pb-6" style="position: relative; left: -10px;">
         <div class="column is-half">
-          <p class="is-size-2 has-text-left" style="position: relative; left: 6px;" ref="about-me" v-scrollanimation> 
+          <p class="has-text-left is-short-descr" style="position: relative; left: 6px;" ref="about-me" v-scrollanimation> 
             {{ $t('shortdescription') }}
           </p>
         </div>
@@ -174,6 +174,10 @@ export default {
   left: 5px; 
 }
 
+.is-short-descr{
+  font-size: 36px;
+}
+
 /* Dropdown Button */
 .dropbtn {
   background-color: rgb(247, 242, 234) ;
@@ -229,10 +233,24 @@ export default {
   transition: all 2s ease-out;
 }
 
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 992px) {
+  .main-content{
+    height: 55vh;
+  }
   .navbar-menu{
     position: relative;
     left: 1.8rem;
+  }
+  .is-short-descr{
+    font-size: 18px;
+    position: relative;
+    top: -10rem;
+  }
+  .brand-size{
+    font-size: 36px;
+  }
+  .anchor-class{
+    letter-spacing: 0;
   }
 }
 </style>

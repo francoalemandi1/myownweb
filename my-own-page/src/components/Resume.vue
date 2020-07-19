@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-one-quarter">
-          <h2 class="is-size-4 is-resume-title" id="#resume" v-scrollanimation>{{ $t('resume') }}</h2>
+          <h2 class="is-resume-title" id="#resume" v-scrollanimation>{{ $t('resume') }}</h2>
         </div>
         <div class="column is-one-third is-resume-pdf">
           <a class="anchor-class" v-scrollanimation href="https://drive.google.com/file/d/1u47js1X6VSyNimUd2DQ8cIifgTIsw6Ov/view?usp=sharing" target="_blank">{{ $t('resume') }}.pdf</a>
@@ -11,11 +11,11 @@
       </div>
       <div class="columns is-centered">
         <div class="column is-one-quarter">
-          <h2 class="is-size-4 is-profile" v-scrollanimation>{{ $t('profile') }}</h2>
+          <h2 class="is-profile" v-scrollanimation>{{ $t('profile') }}</h2>
         </div>
         <div class="column is-one-third is-resume" v-scrollanimation>
-          <h2 v-scrollanimation class="is-size-4">{{ $t('mainresume') }} </h2><br />
-          <p v-scrollanimation class="is-size-5">{{ $t('s21resume')}} <br /><br />
+          <h2 v-scrollanimation class="is-main-resume">{{ $t('mainresume') }} </h2><br />
+          <p v-scrollanimation class="is-s21-resume">{{ $t('s21resume')}} <br /><br />
           {{ $t('doctadevsresume') }} <br /><br />
           {{ $t('aboutmeresume') }} <br /><br />
           {{$t('futureresume')}}
@@ -31,10 +31,10 @@
       </div>
     <div class="columns is-centered">
       <div class="column is-one-quarter">
-        <h2 class="is-size-4 is-skillset" v-scrollanimation>{{ $t('skillset') }}</h2>
+        <h2 class="is-skillset" v-scrollanimation>{{ $t('skillset') }}</h2>
       </div>
       <div class="column is-one-third">
-        <div class="container is-size-4 is-design" v-scrollanimation>{{ $t('design') }}</div>
+        <div class="container is-design" v-scrollanimation>{{ $t('design') }}</div>
           <div v-scrollanimation class="image-container" style='position: relative; left: 0.5rem;'>
             <div class="card-image is-ps-image">
               <figure class="image is-64x64">
@@ -47,8 +47,8 @@
     </div>
     <div class="columns is-centered mt-4">
       <div class="column is-one-quarter"></div>
-      <div class="column is-one-third">
-        <div v-scrollanimation class="container is-size-4 is-code-title">
+      <div class="column is-one-third is-all-skill">
+        <div v-scrollanimation class="container is-code-title">
           {{ $t('code') }}
         </div>
         <div v-scrollanimation class="columns is-full is-code">
@@ -94,7 +94,7 @@
     <div v-scrollanimation class="columns is-centered">
       <div class="column is-one-quarter"></div>
       <div class="column is-one-third">
-        <div class="container is-size-4 is-tools">{{ $t('Tools') }}</div>
+        <div class="container is-tools">{{ $t('Tools') }}</div>
           <div class="image-container" style='position: relative; left: 0.7rem;'>
             <div class="card-image is-git-image">
               <figure class="image is-64x64">
@@ -193,7 +193,28 @@ figure:hover{
   transition: all 2s ease-out;
 }
 
-@media screen and (max-width: 1367px) {
+.is-resume-title,
+.is-profile,
+.is-skillset{
+  font-size: 22px;
+}
+
+.is-main-resume{
+  font-size: 20px;
+}
+.is-s21-resume{
+  font-size: 18px;
+}
+.is-design,
+.is-code-title,
+.is-tools{
+  font-size: 22px;
+}
+
+@media screen and (max-width: 992px) {
+  main{
+    overflow-x: hidden;
+  }
   .is-code {
     display: flex;
     flex-flow: row;
@@ -207,6 +228,7 @@ figure:hover{
   .is-code-title
   {
     text-align: center;
+    font-size: 18px;
   }
   .is-design{
     text-align: center;
@@ -234,6 +256,19 @@ figure:hover{
 
     position: relative;
     left: -0.7rem;
+  }
+  .anchor-class{
+    letter-spacing: 0;
+  }
+  .is-main-resume,
+  .is-s21-resume{
+    font-size: 16px;
+    margin: 12px;
+  }
+}
+@media screen and (min-width: 1365px) and (max-width: 1600px) {
+  .is-2{
+    margin: 0 35px 0 0;
   }
 }
 </style>
