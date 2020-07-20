@@ -34,7 +34,7 @@
           </carousel>
         </div>
         <div class="column is-2"></div>
-        <div class="column is-one-third is-my-info" style="position: relative; top: -2em;">
+        <div class="column is-one-third is-my-info" style="position: relative; top: -4em;">
           <h1 class="is-about-me" id="#about-me" v-scrollanimation>{{ $t('about') }}</h1>
           <br />
           <p class="main-descr-p" v-scrollanimation>{{ $t('maindescription') }}

@@ -240,6 +240,12 @@ export default {
   .navbar-menu{
     position: relative;
     left: 1.8rem;
+
+    text-align: center;
+  }
+  .navbar-end{
+    position: relative;
+    left: 1.6rem;
   }
   .is-short-descr{
     font-size: 18px;
