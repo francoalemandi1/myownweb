@@ -271,4 +271,15 @@ figure:hover{
     margin: 0 35px 0 0;
   }
 }
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (-webkit-min-device-pixel-ratio: 1){
+  .is-html,
+  .is-css,
+  .is-js,
+  .is-vue{
+    margin-left: 3rem;
+  }
+}
 </style>

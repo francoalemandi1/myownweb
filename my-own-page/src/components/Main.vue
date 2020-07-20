@@ -34,7 +34,7 @@
           </carousel>
         </div>
         <div class="column is-2"></div>
-        <div class="column is-one-third is-my-info" style="position: relative; top: -6em;">
+        <div class="column is-one-third is-my-info" style="position: relative; top: -2em;">
           <h1 class="is-about-me" id="#about-me" v-scrollanimation>{{ $t('about') }}</h1>
           <br />
           <p class="main-descr-p" v-scrollanimation>{{ $t('maindescription') }}
@@ -167,6 +167,14 @@ a:hover:after {
   .main-descr-p{
     font-size: 18px;
     margin: 12px;
+  }
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (-webkit-min-device-pixel-ratio: 1){
+  .carousel{
+    text-align: center;
   }
 }
 </style>
